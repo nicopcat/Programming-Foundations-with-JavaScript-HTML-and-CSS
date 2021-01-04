@@ -1,0 +1,17 @@
+// write a green screen alg
+
+var fgimg = new SimpleImage("drewRobert.png");
+var bgimg = new SimpleImage("dinos.png");
+var output = new SimpleImage(fgimg.getWidth(), fgimg.getHeight());
+
+for(var pixel of fgimg.values()){
+    if(pixel.getGreen() > pixel.getBlue() + pixel.getRed() ){
+        var bgpixel = bgimg.getPixel(pixel.getX(), pixel.getY());
+        output.setPixel(pixel.getX(), pixel.getY(), bgpixel);
+    }
+    else{
+        output.setPixel(pixel.getX(), pixel.getY(), pixel);
+    }
+}
+
+print(output);

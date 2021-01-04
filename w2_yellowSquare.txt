@@ -1,0 +1,12 @@
+// write your code here
+var square = new  SimpleImage(200,200);
+
+
+for (var pixl of square.values()){
+    //var nG = 125 - pixl.getGreen(); why not put the value directly?
+    pixl.setGreen(255);
+    //var nR = 255 - pixl.getRed();
+    pixl.setRed(255);
+}
+
+print(square);

@@ -1,0 +1,25 @@
+// write your code here
+//write a function"setBlack" 1 para Black(0,0,0)
+//write a function"addBorder" 10 pixek thick.
+
+function setBlack(p){
+    p.setRed(0);
+    p.setBlue(0);
+    p.setGreen(0);
+}
+var img = new SimpleImage("smallpanda.png");
+
+var w = img.getWidth();
+var h = img.getHeight();
+
+    for(var pix of img.values()){
+        if(pix.getX()<= 10 || pix.getX() >= w -10 ){
+           setBlack(pix); 
+        }
+        if(pix.getY()<= 10 || pix.getY() >= h -10 ){
+           setBlack(pix);
+        }
+    }
+
+
+print(img);

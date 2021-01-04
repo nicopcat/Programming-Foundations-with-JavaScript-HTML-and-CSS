@@ -1,0 +1,20 @@
+/* 1.change "Duke blue devil" to be yellow  2.if pixel = (0,0,255), then do nothing 3.if pixel =! (0,0,255), set it to (0,0,255)
+getRed - 0就set(255,255,0)
+       - 255就set就不管
+*/
+
+var img = new SimpleImage("duke_blue_devil.png");
+for(var pixel of img.values()){
+    if(pixel.getRed() === 0){
+        pixel.setRed(255);
+        pixel.setGreen(255);
+        pixel.setBlue(0);
+    }
+    else{
+        pixel.setRed(255);
+        pixel.setGreen(255);
+        pixel.setBlue(255);
+    }
+}
+
+print(img);

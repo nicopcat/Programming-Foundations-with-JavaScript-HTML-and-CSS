@@ -1,0 +1,15 @@
+//1,.write a function named swapRedGreen with one parameter pixel 2.test it with different images
+//(20,100,50) - (100,20,50) NewG = getRed(); setRed(getGreen()); setGreen(NewG);
+
+
+var img = new SimpleImage("usain.jpg");
+function swapRedGreen(){
+    for (var pixl of img.values()){
+        NewG = pixl.getRed(); 
+        pixl.setRed(pixl.getGreen()); 
+        pixl.setGreen(NewG);
+    }
+}
+
+swapRedGreen(img);
+print(img);
